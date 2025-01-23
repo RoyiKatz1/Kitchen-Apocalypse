@@ -490,7 +490,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -875,7 +875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 476680566886081293, guid: ae8ef1eb4d78e9b48b619caaecb3e931, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 476680566886081293, guid: ae8ef1eb4d78e9b48b619caaecb3e931, type: 3}
       propertyPath: m_LocalPosition.y
@@ -911,26 +911,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 476680566886081293, guid: ae8ef1eb4d78e9b48b619caaecb3e931, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1670201868324844438, guid: ae8ef1eb4d78e9b48b619caaecb3e931, type: 3}
-      propertyPath: moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1670201868324844438, guid: ae8ef1eb4d78e9b48b619caaecb3e931, type: 3}
-      propertyPath: damageAmount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1670201868324844438, guid: ae8ef1eb4d78e9b48b619caaecb3e931, type: 3}
-      propertyPath: damageInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4148837635398432301, guid: ae8ef1eb4d78e9b48b619caaecb3e931, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446639729832385794, guid: ae8ef1eb4d78e9b48b619caaecb3e931, type: 3}
-      propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
