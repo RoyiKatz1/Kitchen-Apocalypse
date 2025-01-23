@@ -1,63 +1,43 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public int poolSize = 20;
-    public float spawnInterval = 2f;
+    public float initialSpawnInterval = 2f;
+    public float spawnIntervalDecrease = 0.1f;
+    public float minSpawnInterval = 0.5f;
+    public Vector2 spawnAreaSize = new Vector2(10f, 10f); // Adjust this to fit your map size
 
-    private List<GameObject> enemyPool;
+    private float currentSpawnInterval;
     private float timer;
 
     void Start()
     {
-        InitializePool();
-    }
-
-    void InitializePool()
-    {
-        enemyPool = new List<GameObject>();
-        for (int i = 0; i < poolSize; i++)
-        {
-            GameObject enemy = Instantiate(enemyPrefab);
-            enemy.SetActive(false);
-            enemyPool.Add(enemy);
-        }
+        currentSpawnInterval = initialSpawnInterval;
+        timer = currentSpawnInterval;
     }
 
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= spawnInterval)
+        timer -= Time.deltaTime;
+        if (timer <= 0)
         {
             SpawnEnemy();
-            timer = 0;
+            currentSpawnInterval = Mathf.Max(currentSpawnInterval - spawnIntervalDecrease, minSpawnInterval);
+            timer = currentSpawnInterval;
         }
     }
 
     void SpawnEnemy()
     {
-        GameObject enemy = GetPooledEnemy();
-        if (enemy != null)
-        {
-            enemy.transform.position = GetRandomSpawnPosition();
-            enemy.SetActive(true);
-        }
-        else
-        {
-            Debug.LogWarning("No available enemies in pool");
-        }
+        Vector2 spawnPosition = GetRandomSpawnPosition();
+        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
     }
 
-    GameObject GetPooledEnemy()
+    Vector2 GetRandomSpawnPosition()
     {
-        return enemyPool.Find(e => !e.activeInHierarchy);
-    }
-
-    Vector3 GetRandomSpawnPosition()
-    {
-        // Implement your spawn position logic here
-        return Vector3.zero;
+        float x = Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2);
+        float y = Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2);
+        return new Vector2(x, y) + (Vector2)transform.position;
     }
 }
