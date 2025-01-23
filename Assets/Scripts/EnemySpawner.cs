@@ -1,43 +1,63 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public float initialSpawnInterval = 2f;
-    public float spawnIntervalDecrease = 0.1f;
-    public float minSpawnInterval = 0.5f;
-    public Vector2 spawnAreaSize = new Vector2(10f, 10f); // Adjust this to fit your map size
+    public int poolSize = 20;
+    public float spawnInterval = 2f;
 
-    private float currentSpawnInterval;
+    private List<GameObject> enemyPool;
     private float timer;
 
     void Start()
     {
-        currentSpawnInterval = initialSpawnInterval;
-        timer = currentSpawnInterval;
+        InitializePool();
+    }
+
+    void InitializePool()
+    {
+        enemyPool = new List<GameObject>();
+        for (int i = 0; i < poolSize; i++)
+        {
+            GameObject enemy = Instantiate(enemyPrefab);
+            enemy.SetActive(false);
+            enemyPool.Add(enemy);
+        }
     }
 
     void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
+        timer += Time.deltaTime;
+        if (timer >= spawnInterval)
         {
             SpawnEnemy();
-            currentSpawnInterval = Mathf.Max(currentSpawnInterval - spawnIntervalDecrease, minSpawnInterval);
-            timer = currentSpawnInterval;
+            timer = 0;
         }
     }
 
     void SpawnEnemy()
     {
-        Vector2 spawnPosition = GetRandomSpawnPosition();
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        GameObject enemy = GetPooledEnemy();
+        if (enemy != null)
+        {
+            enemy.transform.position = GetRandomSpawnPosition();
+            enemy.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("No available enemies in pool");
+        }
     }
 
-    Vector2 GetRandomSpawnPosition()
+    GameObject GetPooledEnemy()
     {
-        float x = Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2);
-        float y = Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2);
-        return new Vector2(x, y) + (Vector2)transform.position;
+        return enemyPool.Find(e => !e.activeInHierarchy);
+    }
+
+    Vector3 GetRandomSpawnPosition()
+    {
+        // Implement your spawn position logic here
+        return Vector3.zero;
     }
 }
