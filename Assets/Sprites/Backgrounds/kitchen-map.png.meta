@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kitchen-map_0: 2690134876179435768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
