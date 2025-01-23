@@ -152,7 +152,7 @@ MonoBehaviour:
   initialSpawnInterval: 2
   spawnIntervalDecrease: 0.1
   minSpawnInterval: 0.5
-  borderOffset: 1
+  spawnAreaSize: {x: 10, y: 10}
 --- !u!4 &227930461
 Transform:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 1007568957}
   - component: {fileID: 1007568958}
   m_Layer: 0
-  m_Name: Map
+  m_Name: MapBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -859,7 +859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca06c3bee07aaca4bb07d955023361ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 1000
   moveSpeed: 5
 --- !u!1001 &1102640119515553200
 PrefabInstance:
