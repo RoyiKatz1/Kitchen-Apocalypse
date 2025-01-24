@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 7141c415a8c0e4b44998f2d7fda0ff97
+guid: e80e50d868ec94f45afd140e70e57837
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4341075437338884959
-    second: player_walk 1_0
-  - first:
-      213: -3305790296820388832
-    second: player_walk 1_1
-  - first:
-      213: 2435793237683143876
-    second: player_walk 1_2
+      213: 159068718711766808
+    second: Cabbage_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_walk 1_0
+      name: Cabbage_0
       rect:
         serializedVersion: 2
-        x: 96
-        y: 177
-        width: 522
-        height: 788
+        x: 0
+        y: 0
+        width: 2279
+        height: 1889
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a40e36c3e661c3c0800000000000000
-      internalID: -4341075437338884959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_walk 1_1
-      rect:
-        serializedVersion: 2
-        x: 710
-        y: 188
-        width: 522
-        height: 788
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 02c66186d397f12d0800000000000000
-      internalID: -3305790296820388832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_walk 1_2
-      rect:
-        serializedVersion: 2
-        x: 1294
-        y: 189
-        width: 461
-        height: 788
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c407665b0dadc120800000000000000
-      internalID: 2435793237683143876
+      spriteID: 81ff0b92820253200800000000000000
+      internalID: 159068718711766808
       vertices: []
       indices: 
       edges: []
@@ -197,10 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      player_walk 1_0: -4341075437338884959
-      player_walk 1_1: -3305790296820388832
-      player_walk 1_2: 2435793237683143876
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
