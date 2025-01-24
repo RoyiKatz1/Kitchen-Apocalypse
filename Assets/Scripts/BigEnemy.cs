@@ -18,7 +18,14 @@ public class BigEnemy : Enemy
 
         // Slower Intervals
         damageInterval *= 2f;
+
+        // Change scoring
+        scoreValue = 50; 
     }
 
-    // You can override other methods if needed
+    public override void TakeDamage(float damage)
+    {
+        base.TakeDamage(damage);
+        // Additional BigEnemy-specific damage handling
+    }
 }

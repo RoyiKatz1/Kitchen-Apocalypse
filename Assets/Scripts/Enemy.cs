@@ -6,6 +6,7 @@ public abstract class Enemy : MonoBehaviour
     public float health = 100f;
     public float damageAmount = 5f;
     public float damageInterval = 1f;
+    public int scoreValue = 10; // Default score value
 
     protected Transform player;
     protected float lastDamageTime;
@@ -56,7 +57,7 @@ public abstract class Enemy : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
-        Debug.Log("Enemy took " + damage + " damage. Remaining health: " + health);
+        Debug.Log($"{GetType().Name} took {damage} damage. Remaining health: {health}");
         if (health <= 0)
         {
             Die();
@@ -65,7 +66,15 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
-        Debug.Log("Enemy died");
+        Debug.Log($"{GetType().Name} died");
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.AddScore(scoreValue);
+        }
+        else
+        {
+            Debug.LogWarning("ScoreManager instance not found. Score not added.");
+        }
         Destroy(gameObject);
     }
 }
