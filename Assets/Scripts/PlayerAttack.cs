@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public float attackRange = 1f;
+    public float attackRange = 1.2f;
     public float attackCooldown = 0.5f;
     public int attackDamage = 100;
     public LayerMask enemyLayer;
+    public float attackAngle = 110f;
 
     private Animator animator;
     private float lastAttackTime;
@@ -33,44 +34,26 @@ public class PlayerAttack : MonoBehaviour
     {
         lastAttackTime = Time.time;
 
-        // Determine attack direction
         Vector2 attackDirection = playerMovement.IsFacingRight ? Vector2.right : Vector2.left;
-        Vector2 attackPosition = (Vector2)transform.position + attackDirection * attackRange;
 
-        // Debug draw the attack area
-        Debug.DrawLine(transform.position, attackPosition, Color.red, 1f);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
 
-        // Get all colliders in the scene
-        Collider2D[] allColliders = Physics2D.OverlapCircleAll(transform.position, 10f); // Large radius to ensure we catch everything nearby
-
-        Debug.Log($"Total colliders found: {allColliders.Length}");
-
-        foreach (Collider2D collider in allColliders)
+        foreach (Collider2D collider in hitColliders)
         {
-            Debug.Log($"Collider: {collider.gameObject.name}, Layer: {LayerMask.LayerToName(collider.gameObject.layer)}, Position: {collider.transform.position}");
+            Vector2 directionToTarget = ((Vector2)collider.transform.position - (Vector2)transform.position).normalized;
+            float angle = Vector2.Angle(attackDirection, directionToTarget);
 
-            if (((1 << collider.gameObject.layer) & enemyLayer) != 0)
+            if (angle <= attackAngle / 2)
             {
-                float distance = Vector2.Distance(attackPosition, collider.transform.position);
-                Debug.Log($"Enemy found: {collider.gameObject.name}, Distance: {distance}");
-
-                if (distance <= attackRange / 2)
+                Enemy enemy = collider.GetComponent<Enemy>();
+                if (enemy != null)
                 {
-                    Enemy enemy = collider.GetComponent<Enemy>();
-                    if (enemy != null)
-                    {
-                        enemy.TakeDamage(attackDamage);
-                        Debug.Log($"Dealt {attackDamage} damage to enemy: {collider.gameObject.name}");
-                    }
-                    else
-                    {
-                        Debug.LogWarning($"Enemy component not found on GameObject: {collider.gameObject.name}");
-                    }
+                    enemy.TakeDamage(attackDamage);
+                    Debug.Log($"Dealt {attackDamage} damage to enemy: {collider.gameObject.name}");
                 }
             }
         }
 
-        // Trigger animation
         if (animator != null && HasParameter("Attack"))
         {
             animator.SetTrigger("Attack");
@@ -105,10 +88,27 @@ public class PlayerAttack : MonoBehaviour
         if (playerMovement != null)
         {
             Vector2 attackDirection = playerMovement.IsFacingRight ? Vector2.right : Vector2.left;
-            Vector2 attackPosition = (Vector2)transform.position + attackDirection * attackRange;
 
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(attackPosition, attackRange / 2);
+            Gizmos.DrawWireSphere(transform.position, attackRange);
+
+            Vector3 startRay = Quaternion.Euler(0, 0, attackAngle / 2) * attackDirection * attackRange;
+            Vector3 endRay = Quaternion.Euler(0, 0, -attackAngle / 2) * attackDirection * attackRange;
+
+            Gizmos.DrawLine(transform.position, transform.position + startRay);
+            Gizmos.DrawLine(transform.position, transform.position + endRay);
+
+            int segments = 20;
+            Vector3 previousPoint = transform.position + startRay;
+            for (int i = 1; i <= segments; i++)
+            {
+                float t = i / (float)segments;
+                float angle = Mathf.Lerp(attackAngle / 2, -attackAngle / 2, t);
+                Vector3 currentPoint = transform.position + Quaternion.Euler(0, 0, angle) * attackDirection * attackRange;
+
+                Gizmos.DrawLine(previousPoint, currentPoint);
+                previousPoint = currentPoint;
+            }
         }
     }
 }
