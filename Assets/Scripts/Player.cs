@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
     public Slider healthBar;
     public Image healthFill;
 
+    public GameObject circlingItem;
+    private bool isCirclingItemActive = false;
+
     void Awake()
     {
         if (Instance == null)
@@ -41,8 +44,37 @@ public class Player : MonoBehaviour
             float moveHorizontal = Input.GetAxisRaw("Horizontal");
             float moveVertical = Input.GetAxisRaw("Vertical");
             movement = new Vector2(moveHorizontal, moveVertical).normalized;
+            CheckScoreForCirclingItem();
         }
     }
+
+    void CheckScoreForCirclingItem()
+    {
+        if (!isCirclingItemActive && ScoreManager.Instance.GetScore() >= 20)
+        {
+            ActivateCirclingItem();
+        }
+    }
+
+    void ActivateCirclingItem()
+    {
+        if (circlingItem != null)
+        {
+            circlingItem.SetActive(true);
+            CirclingItem circlingItemScript = circlingItem.GetComponent<CirclingItem>();
+            if (circlingItemScript != null)
+            {
+                circlingItemScript.StartCircling();
+            }
+            isCirclingItemActive = true;
+            Debug.Log("Circling item activated!");
+        }
+        else
+        {
+            Debug.LogWarning("Circling item is not assigned!");
+        }
+    }
+
 
     void FixedUpdate()
     {

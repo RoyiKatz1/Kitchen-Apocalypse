@@ -4,7 +4,7 @@ public class Tomato : Enemy
 {
     public float sizeMultiplier = 1.5f;
     public float explosionRadius = 2f;
-    public int damage = 20;
+    public int explosionDamage = 40;
     private Animator animator;
 
 
@@ -61,8 +61,8 @@ public class Tomato : Enemy
                 Player player = obj.GetComponent<Player>();
                 if (player != null)
                 {
-                    player.TakeDamage(damage);
-                    Debug.Log($"{GetType().Name} exploded and dealt {damage} damage to the player");
+                    player.TakeDamage(explosionDamage);
+                    Debug.Log($"{GetType().Name} exploded and dealt {explosionDamage} explosionDamage to the player");
                 }
             }
         }
