@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public List<EnemyType> enemyTypes = new List<EnemyType>();
-    public float initialSpawnInterval = 2f;
+    public float initialSpawnInterval = 4f;
     public float spawnIntervalDecrease = 0.1f;
     public float minSpawnInterval = 0.5f;
     public Vector2 spawnAreaSize = new Vector2(10f, 10f);
@@ -74,8 +74,8 @@ public class EnemySpawner : MonoBehaviour
 
     Vector2 GetRandomSpawnPosition()
     {
-        float x = Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2);
-        float y = Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2);
+        float x = Random.Range(-spawnAreaSize.x, spawnAreaSize.x);
+        float y = Random.Range(-spawnAreaSize.y, spawnAreaSize.y - 2);
         return new Vector2(x, y) + (Vector2)transform.position;
     }
 }
