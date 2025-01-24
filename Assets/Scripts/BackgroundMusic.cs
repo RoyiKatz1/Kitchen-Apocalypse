@@ -1,12 +1,9 @@
 using UnityEngine;
-using System.Collections;
 
 public class BackgroundMusic : MonoBehaviour
 {
     private static BackgroundMusic instance = null;
     private AudioSource audioSource;
-    public float pauseDuration = 3f;  // Duration of pause between plays
-    private Coroutine playRoutine;
 
     private void Awake()
     {
@@ -25,19 +22,9 @@ public class BackgroundMusic : MonoBehaviour
 
     public void PlayMusic()
     {
-        if (audioSource != null && playRoutine == null)
-        {
-            playRoutine = StartCoroutine(PlayMusicWithPause());
-        }
-    }
-
-    private IEnumerator PlayMusicWithPause()
-    {
-        while (true)
+        if (audioSource != null && !audioSource.isPlaying)
         {
             audioSource.Play();
-            yield return new WaitForSeconds(audioSource.clip.length);
-            yield return new WaitForSeconds(pauseDuration);
         }
     }
 
@@ -45,11 +32,6 @@ public class BackgroundMusic : MonoBehaviour
     {
         if (audioSource != null)
         {
-            if (playRoutine != null)
-            {
-                StopCoroutine(playRoutine);
-                playRoutine = null;
-            }
             audioSource.Stop();
         }
     }
