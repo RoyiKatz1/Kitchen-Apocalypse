@@ -1,14 +1,17 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
 
     public float health = 100f;
+    public float maxHealth = 100f;
     public float moveSpeed = 5f;
 
     private Vector2 movement;
     private bool isDead = false;
+    public Slider healthBar;
 
     void Awake()
     {
@@ -21,6 +24,13 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void Start()
+    {
+        healthBar.maxValue = maxHealth;
+        healthBar.value = health;
+    }
+
 
     void Update()
     {
@@ -43,6 +53,8 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        health = Mathf.Clamp(health, 0, maxHealth);
+        healthBar.value = health;
         Debug.Log("Player health: " + health);
         if (health <= 0 && !isDead)
         {
