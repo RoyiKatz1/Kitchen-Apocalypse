@@ -4,7 +4,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public float attackRange = 1f;
     public float attackCooldown = 0.5f;
-    public int attackDamage = 20;
+    public int attackDamage = 100;
     public LayerMask enemyLayer;
     public GameObject attackEffectPrefab;
 

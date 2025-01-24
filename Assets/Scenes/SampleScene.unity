@@ -731,17 +731,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5545295643136686324, guid: 2669d1f4c8061c744bc21859fef3b10b, type: 3}
-      propertyPath: moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7554271710954870863, guid: 2669d1f4c8061c744bc21859fef3b10b, type: 3}
       propertyPath: m_Name
       value: BigEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7554271710954870863, guid: 2669d1f4c8061c744bc21859fef3b10b, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -915,8 +907,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.27379215}
-  m_Size: {x: 4.6899996, y: 4.6899996}
+  m_Offset: {x: -0.34073174, y: -0.07614732}
+  m_Size: {x: 2.4246004, y: 7.04749}
   m_Direction: 0
 --- !u!114 &1769565108
 MonoBehaviour:
@@ -966,7 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed0fb3f82417c6d4eb10de9d051dfb0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 2
+  attackRange: 1
   attackCooldown: 0.5
   attackDamage: 100
   enemyLayer:
@@ -984,10 +976,6 @@ PrefabInstance:
     - target: {fileID: 208827256772119041, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
       propertyPath: m_Name
       value: RegularEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 208827256772119041, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9211314993723911198, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
       propertyPath: m_LocalPosition.x

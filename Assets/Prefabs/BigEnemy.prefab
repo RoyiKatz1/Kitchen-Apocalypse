@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9219413396972759314}
   - component: {fileID: 6772143457974134212}
   - component: {fileID: 5545295643136686324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &6772143457974134212
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
