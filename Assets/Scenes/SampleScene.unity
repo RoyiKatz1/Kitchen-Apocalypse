@@ -957,9 +957,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -921814502495206045, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -921814502495206045, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
+      propertyPath: 'm_Animations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 208827256772119041, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
       propertyPath: m_Name
       value: RegularEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265326244074704368, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
+      propertyPath: m_Size.x
+      value: 5.027187
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265326244074704368, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
+      propertyPath: m_Size.y
+      value: 8.710953
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265326244074704368, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.079396166
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265326244074704368, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.13130982
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265326244074704368, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
+      propertyPath: m_Direction
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9211314993723911198, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
       propertyPath: m_LocalPosition.x
