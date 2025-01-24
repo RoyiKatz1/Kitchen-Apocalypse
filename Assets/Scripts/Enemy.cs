@@ -62,6 +62,7 @@ public abstract class Enemy : MonoBehaviour
             if (Time.time - lastDamageTime >= damageInterval)
             {
                 Player playerScript = collision.gameObject.GetComponent<Player>();
+                AudioManager.Instance.PlaySound(AudioManager.Instance.enemyAttackSound);
                 playerScript.TakeDamage(damageAmount);
                 lastDamageTime = Time.time;
             }
@@ -81,6 +82,8 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.enemyDeathSound);
+
         Debug.Log($"{GetType().Name} died");
         if (ScoreManager.Instance != null)
         {
