@@ -59,8 +59,8 @@ public class LoopingAudio : MonoBehaviour
         while (t < crossfadeDuration)
         {
             t += Time.deltaTime;
-            audioSource.volume = Mathf.Lerp(1, 0, t / crossfadeDuration);
-            newSource.volume = Mathf.Lerp(0, 1, t / crossfadeDuration);
+            audioSource.volume = Mathf.Lerp(0.2f, 0, t / crossfadeDuration);
+            newSource.volume = Mathf.Lerp(0, 0.2f, t / crossfadeDuration);
             yield return null;
         }
 
