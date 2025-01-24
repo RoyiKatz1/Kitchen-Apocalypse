@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Linq;
 
 
 public class GameManager : MonoBehaviour
@@ -71,10 +72,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void CleanupScene()
+    {
+        var persistentObjects = GameObject.FindObjectsByType<GameObject>(FindObjectsSortMode.None)
+            .Where(go => go.scene.name == "DontDestroyOnLoad")
+            .ToArray();
+
+        foreach (var obj in persistentObjects)
+        {
+            Destroy(obj);
+        }
+    }
+
     public void LoadMainMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenu");
+        CleanupScene();
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
 

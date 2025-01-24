@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
     {
         backgroundMusic.PlayMusic();
         // Load your single-player scene
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 
     public void PlayCoop()
