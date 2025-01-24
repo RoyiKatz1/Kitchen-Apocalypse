@@ -473,7 +473,7 @@ SpriteRenderer:
   m_SortingLayerID: 1471373917
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2690134876179435768, guid: 9e995849eb6a7c6418e4c64c2b741d84, type: 3}
+  m_Sprite: {fileID: 1715559743813112150, guid: 406bc5c54e786404f9ae13344546ac26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -533,7 +533,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 4.1621094, y: 0.08118725}
+  m_Offset: {x: 4.253413, y: 0.08118725}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -543,7 +543,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.3452687, y: 8.87755}
+  m_Size: {x: 1.1626608, y: 8.87755}
   m_EdgeRadius: 0
 --- !u!61 &1007568956
 BoxCollider2D:
@@ -625,7 +625,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.048301697, y: -3.6226578}
+  m_Offset: {x: -0.048301697, y: -3.7908492}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -635,7 +635,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 9.708639, y: 1.9320383}
+  m_Size: {x: 9.708639, y: 1.5956554}
   m_EdgeRadius: 0
 --- !u!61 &1007568958
 BoxCollider2D:
@@ -671,7 +671,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -4.081528, y: -0.024150848}
+  m_Offset: {x: -4.110361, y: -0.024150848}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -681,7 +681,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.4489794, y: 9.080748}
+  m_Size: {x: 1.3913133, y: 9.080748}
   m_EdgeRadius: 0
 --- !u!1001 &1167610704
 PrefabInstance:
@@ -730,6 +730,10 @@ PrefabInstance:
     - target: {fileID: 2951277156992774805, guid: 2669d1f4c8061c744bc21859fef3b10b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5545295643136686324, guid: 2669d1f4c8061c744bc21859fef3b10b, type: 3}
+      propertyPath: moveSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7554271710954870863, guid: 2669d1f4c8061c744bc21859fef3b10b, type: 3}
       propertyPath: m_Name
