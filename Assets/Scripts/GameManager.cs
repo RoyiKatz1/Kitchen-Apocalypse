@@ -64,19 +64,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void RestartGame()
+    public void LoadMainMenu()
     {
-        // Reset the game and start again
         Time.timeScale = 1;
-        isGameOver = false;
-
-        // Disable the end game screen
-        if (endGameScreen != null)
-        {
-            endGameScreen.SetActive(false);
-        }
-
-        // Reload the scene
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("MainMenu");
     }
+
+
 }
