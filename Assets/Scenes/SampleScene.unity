@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 227930461}
   - component: {fileID: 227930460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,6 +739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7554271710954870863, guid: 2669d1f4c8061c744bc21859fef3b10b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -754,12 +758,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1769565106}
   - component: {fileID: 1769565105}
-  - component: {fileID: 1769565104}
-  - component: {fileID: 1769565103}
-  - component: {fileID: 1769565107}
-  - component: {fileID: 1769565108}
   - component: {fileID: 1769565109}
-  m_Layer: 0
+  - component: {fileID: 1769565104}
+  - component: {fileID: 1769565107}
+  - component: {fileID: 1769565103}
+  - component: {fileID: 1769565108}
+  - component: {fileID: 1769565110}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -949,6 +954,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1769565110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769565102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0fb3f82417c6d4eb10de9d051dfb0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 2
+  attackCooldown: 0.5
+  attackDamage: 100
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  attackEffectPrefab: {fileID: 0}
 --- !u!1001 &1797771139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -960,6 +984,10 @@ PrefabInstance:
     - target: {fileID: 208827256772119041, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
       propertyPath: m_Name
       value: RegularEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 208827256772119041, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9211314993723911198, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
       propertyPath: m_LocalPosition.x

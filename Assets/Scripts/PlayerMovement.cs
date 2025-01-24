@@ -3,10 +3,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    private Animator animator; // animator object
+
+    private Animator animator;
     private Rigidbody2D rb;
     private Vector2 movement;
     private bool isFacingRight = true;
+
+    public bool IsFacingRight { get { return isFacingRight; } }
 
     void Start()
     {
@@ -20,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        animator.SetBool("isWalking", movement != Vector2.zero); // update animator
+        animator.SetBool("isWalking", movement != Vector2.zero);
 
         // Normalize diagonal movement
         movement = movement.normalized;
@@ -34,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
-
     }
 
     void FixedUpdate()
@@ -43,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    // Flip the player sprite
     void Flip()
     {
         isFacingRight = !isFacingRight;
@@ -51,5 +52,4 @@ public class PlayerMovement : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
-
 }

@@ -56,9 +56,16 @@ public abstract class Enemy : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
+        Debug.Log("Enemy took " + damage + " damage. Remaining health: " + health);
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    protected virtual void Die()
+    {
+        Debug.Log("Enemy died");
+        Destroy(gameObject);
     }
 }
