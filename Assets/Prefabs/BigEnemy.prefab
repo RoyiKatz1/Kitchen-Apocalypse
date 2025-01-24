@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9219413396972759314}
   - component: {fileID: 6772143457974134212}
   - component: {fileID: 5545295643136686324}
+  - component: {fileID: 7231405161482587382}
   m_Layer: 6
   m_Name: BigEnemy
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 30, y: 5, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: -356508819
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 159068718711766808, guid: e80e50d868ec94f45afd140e70e57837, type: 3}
+  m_Sprite: {fileID: 233423832, guid: 37cd759d440b31b4f805dda9de7e66e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -171,3 +172,25 @@ MonoBehaviour:
   damageAmount: 5
   damageInterval: 1
   sizeMultiplier: 1.5
+--- !u!95 &7231405161482587382
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7554271710954870863}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 617fa711826752c42a3905a07d341fb8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
