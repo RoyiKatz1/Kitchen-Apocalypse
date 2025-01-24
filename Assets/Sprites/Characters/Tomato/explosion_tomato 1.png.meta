@@ -1,0 +1,1056 @@
+fileFormatVersion: 2
+guid: 6c3fcf3dc4357c941a8202713546f1ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6204803151291391071
+    second: explosion_tomato 1_0
+  - first:
+      213: -4322718972818620165
+    second: explosion_tomato 1_1
+  - first:
+      213: -3901975070119782439
+    second: explosion_tomato 1_2
+  - first:
+      213: -9063432679033806120
+    second: explosion_tomato 1_3
+  - first:
+      213: -5851321693122501790
+    second: explosion_tomato 1_4
+  - first:
+      213: -3985859708852333599
+    second: explosion_tomato 1_5
+  - first:
+      213: 4241057651374464912
+    second: explosion_tomato 1_6
+  - first:
+      213: -1722201106347824377
+    second: explosion_tomato 1_7
+  - first:
+      213: -3887704147692765257
+    second: explosion_tomato 1_8
+  - first:
+      213: 7902845287746968403
+    second: explosion_tomato 1_9
+  - first:
+      213: -1273016538164689813
+    second: explosion_tomato 1_10
+  - first:
+      213: 1660628275094413570
+    second: explosion_tomato 1_11
+  - first:
+      213: 254896708456489112
+    second: explosion_tomato 1_12
+  - first:
+      213: -9122776520905526691
+    second: explosion_tomato 1_13
+  - first:
+      213: -1697027372729877383
+    second: explosion_tomato 1_14
+  - first:
+      213: -8665136765050797591
+    second: explosion_tomato 1_15
+  - first:
+      213: 8998982049828809356
+    second: explosion_tomato 1_16
+  - first:
+      213: 8790353254931786587
+    second: explosion_tomato 1_17
+  - first:
+      213: 7467514604891253598
+    second: explosion_tomato 1_18
+  - first:
+      213: 6997458796037442359
+    second: explosion_tomato 1_19
+  - first:
+      213: 2547583367892280504
+    second: explosion_tomato 1_20
+  - first:
+      213: 9196521543500989440
+    second: explosion_tomato 1_21
+  - first:
+      213: 7506899254299884657
+    second: explosion_tomato 1_22
+  - first:
+      213: -9047646806470114523
+    second: explosion_tomato 1_23
+  - first:
+      213: -7787444885368143763
+    second: explosion_tomato 1_24
+  - first:
+      213: -6484100476540849848
+    second: explosion_tomato 1_25
+  - first:
+      213: 6915742523547399912
+    second: explosion_tomato 1_26
+  - first:
+      213: 4176106923124198022
+    second: explosion_tomato 1_27
+  - first:
+      213: -5425136244813269904
+    second: explosion_tomato 1_28
+  - first:
+      213: -1885824102211790508
+    second: explosion_tomato 1_29
+  - first:
+      213: 8172487713452618155
+    second: explosion_tomato 1_30
+  - first:
+      213: 3016658227975704766
+    second: explosion_tomato 1_31
+  - first:
+      213: 6411896388089467138
+    second: explosion_tomato 1_32
+  - first:
+      213: 796592412067983724
+    second: explosion_tomato 1_33
+  - first:
+      213: -6765596275308404312
+    second: explosion_tomato 1_34
+  - first:
+      213: -7704162249745227230
+    second: explosion_tomato 1_35
+  - first:
+      213: 5756218273007507075
+    second: explosion_tomato 1_36
+  - first:
+      213: -638236800735156861
+    second: explosion_tomato 1_37
+  - first:
+      213: -8278550612512388542
+    second: explosion_tomato 1_38
+  - first:
+      213: -8369442652460505854
+    second: explosion_tomato 1_39
+  - first:
+      213: -361899686211911623
+    second: explosion_tomato 1_40
+  - first:
+      213: -4234635434292335034
+    second: explosion_tomato 1_41
+  - first:
+      213: 7438401304918400704
+    second: explosion_tomato 1_42
+  - first:
+      213: -1466206188806537192
+    second: explosion_tomato 1_43
+  - first:
+      213: -8240787653736433657
+    second: explosion_tomato 1_44
+  - first:
+      213: 5893028822709753653
+    second: explosion_tomato 1_45
+  - first:
+      213: -2538978121071543950
+    second: explosion_tomato 1_46
+  - first:
+      213: 1252539765098883835
+    second: explosion_tomato 1_47
+  - first:
+      213: -7941258225594814909
+    second: explosion_tomato 1_48
+  - first:
+      213: 4570572545052425358
+    second: explosion_tomato 1_49
+  - first:
+      213: 8032479793658232101
+    second: explosion_tomato 1_50
+  - first:
+      213: -8364515062405343308
+    second: explosion_tomato 1_51
+  - first:
+      213: -3691969143165681782
+    second: explosion_tomato 1_52
+  - first:
+      213: 4305256112065381747
+    second: explosion_tomato 1_53
+  - first:
+      213: 2806967624954055669
+    second: explosion_tomato 1_54
+  - first:
+      213: 6126029893241274685
+    second: explosion_tomato 1_55
+  - first:
+      213: -568478485727319721
+    second: explosion_tomato 1_56
+  - first:
+      213: 2365621059979793157
+    second: explosion_tomato 1_57
+  - first:
+      213: 8505933018206723533
+    second: explosion_tomato 1_58
+  - first:
+      213: 263083975192940555
+    second: explosion_tomato 1_59
+  - first:
+      213: 5380709120800634357
+    second: explosion_tomato 1_60
+  - first:
+      213: -4008164096541590542
+    second: explosion_tomato 1_61
+  - first:
+      213: -6684067959218443424
+    second: explosion_tomato 1_62
+  - first:
+      213: 1713321971625002732
+    second: explosion_tomato 1_63
+  - first:
+      213: 4315142713061520377
+    second: explosion_tomato 1_64
+  - first:
+      213: -7374802633832789738
+    second: explosion_tomato 1_65
+  - first:
+      213: 5618926911047164865
+    second: explosion_tomato 1_66
+  - first:
+      213: -8262185399188085714
+    second: explosion_tomato 1_67
+  - first:
+      213: 6021614998006530713
+    second: explosion_tomato 1_68
+  - first:
+      213: 2323299997588553175
+    second: explosion_tomato 1_69
+  - first:
+      213: 6633035094890664278
+    second: explosion_tomato 1_70
+  - first:
+      213: 3381699751256656820
+    second: explosion_tomato 1_71
+  - first:
+      213: -1192790247050080322
+    second: explosion_tomato 1_72
+  - first:
+      213: -2576951992847044441
+    second: explosion_tomato 1_73
+  - first:
+      213: 1198201655297006045
+    second: explosion_tomato 1_74
+  - first:
+      213: 6848737828894406326
+    second: explosion_tomato 1_75
+  - first:
+      213: 3035362852878397373
+    second: explosion_tomato 1_76
+  - first:
+      213: -8175455024396083275
+    second: explosion_tomato 1_77
+  - first:
+      213: 9218999138836191297
+    second: explosion_tomato 1_78
+  - first:
+      213: -2796703173519907737
+    second: explosion_tomato 1_79
+  - first:
+      213: -360382070915742582
+    second: explosion_tomato 1_80
+  - first:
+      213: 8190962865005427789
+    second: explosion_tomato 1_81
+  - first:
+      213: -3341491725138918213
+    second: explosion_tomato 1_82
+  - first:
+      213: -3307625274737973330
+    second: explosion_tomato 1_83
+  - first:
+      213: 331125118303934383
+    second: explosion_tomato 1_84
+  - first:
+      213: 1573601556865002508
+    second: explosion_tomato 1_85
+  - first:
+      213: 8136688343877295000
+    second: explosion_tomato 1_86
+  - first:
+      213: 8712589778114419678
+    second: explosion_tomato 1_87
+  - first:
+      213: 4146543728629325088
+    second: explosion_tomato 1_88
+  - first:
+      213: 7548497957977487734
+    second: explosion_tomato 1_89
+  - first:
+      213: -6911197299457195694
+    second: explosion_tomato 1_90
+  - first:
+      213: 4663011341179411033
+    second: explosion_tomato 1_91
+  - first:
+      213: 2832090779670588729
+    second: explosion_tomato 1_92
+  - first:
+      213: 2133961968944119765
+    second: explosion_tomato 1_93
+  - first:
+      213: 976339244657557267
+    second: explosion_tomato 1_94
+  - first:
+      213: 2218409464477078547
+    second: explosion_tomato 1_95
+  - first:
+      213: -5306236636615474776
+    second: explosion_tomato 1_96
+  - first:
+      213: -8983747928153896568
+    second: explosion_tomato 1_97
+  - first:
+      213: -5678680135805067414
+    second: explosion_tomato 1_98
+  - first:
+      213: 2508792376654574982
+    second: explosion_tomato 1_99
+  - first:
+      213: 6054841579695930607
+    second: explosion_tomato 1_100
+  - first:
+      213: -3725100522486319185
+    second: explosion_tomato 1_101
+  - first:
+      213: -6670908256312679059
+    second: explosion_tomato 1_102
+  - first:
+      213: 3236625488038524280
+    second: explosion_tomato 1_103
+  - first:
+      213: 3632006400559779669
+    second: explosion_tomato 1_104
+  - first:
+      213: -779762373041273164
+    second: explosion_tomato 1_105
+  - first:
+      213: -2159533702955141898
+    second: explosion_tomato 1_106
+  - first:
+      213: 1878556301564084360
+    second: explosion_tomato 1_107
+  - first:
+      213: 2855349728019370139
+    second: explosion_tomato 1_108
+  - first:
+      213: 912947063463556704
+    second: explosion_tomato 1_109
+  - first:
+      213: 5125471015828704708
+    second: explosion_tomato 1_110
+  - first:
+      213: -1349991723304025603
+    second: explosion_tomato 1_111
+  - first:
+      213: 215759050709846457
+    second: explosion_tomato 1_112
+  - first:
+      213: -7892528841989417185
+    second: explosion_tomato 1_113
+  - first:
+      213: 3687370814238285602
+    second: explosion_tomato 1_114
+  - first:
+      213: -6241056007611437204
+    second: explosion_tomato 1_115
+  - first:
+      213: -2602146091795293315
+    second: explosion_tomato 1_116
+  - first:
+      213: 3968805783330968793
+    second: explosion_tomato 1_117
+  - first:
+      213: 4288918224573300756
+    second: explosion_tomato 1_118
+  - first:
+      213: 8603794629039409006
+    second: explosion_tomato 1_119
+  - first:
+      213: 591323027372105834
+    second: explosion_tomato 1_120
+  - first:
+      213: -7923884616340428908
+    second: explosion_tomato 1_121
+  - first:
+      213: 1432081319767891186
+    second: explosion_tomato 1_122
+  - first:
+      213: 472210699679470258
+    second: explosion_tomato 1_123
+  - first:
+      213: -6787972926305318464
+    second: explosion_tomato 1_124
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: explosion_tomato 1_0
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 6477
+        width: 105
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5c92f57793eb1650800000000000000
+      internalID: 6204803151291391071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_1
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 6456
+        width: 168
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf00e493ffd9204c0800000000000000
+      internalID: -4322718972818620165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_2
+      rect:
+        serializedVersion: 2
+        x: 5285
+        y: 6477
+        width: 208
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d79417e85669d9c0800000000000000
+      internalID: -3901975070119782439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_3
+      rect:
+        serializedVersion: 2
+        x: 7394
+        y: 6470
+        width: 379
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d2e580aff7383280800000000000000
+      internalID: -9063432679033806120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_4
+      rect:
+        serializedVersion: 2
+        x: 9558
+        y: 6470
+        width: 516
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26365e6fbedebcea0800000000000000
+      internalID: -5851321693122501790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_5
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 4881
+        width: 653
+        height: 482
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3905976b16fa8c0800000000000000
+      internalID: -3985859708852333599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_6
+      rect:
+        serializedVersion: 2
+        x: 2833
+        y: 4881
+        width: 811
+        height: 551
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f902eb6734bda30800000000000000
+      internalID: 4241057651374464912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_7
+      rect:
+        serializedVersion: 2
+        x: 4936
+        y: 4888
+        width: 906
+        height: 564
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b6a58e7338918e0800000000000000
+      internalID: -1722201106347824377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_8
+      rect:
+        serializedVersion: 2
+        x: 7120
+        y: 4874
+        width: 975
+        height: 681
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bfb5f4fca91c0ac0800000000000000
+      internalID: -3887704147692765257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_9
+      rect:
+        serializedVersion: 2
+        x: 9257
+        y: 4888
+        width: 1036
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b170b0beb8cad60800000000000000
+      internalID: 7902845287746968403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_10
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 3306
+        width: 1201
+        height: 784
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b640f790436555ee0800000000000000
+      internalID: -1273016538164689813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_11
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 3299
+        width: 1297
+        height: 852
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201e8f82e9cbb0710800000000000000
+      internalID: 1660628275094413570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_12
+      rect:
+        serializedVersion: 2
+        x: 4744
+        y: 3299
+        width: 1311
+        height: 928
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89027f1b433998300800000000000000
+      internalID: 254896708456489112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_13
+      rect:
+        serializedVersion: 2
+        x: 6894
+        y: 3306
+        width: 1420
+        height: 989
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52f62ab613656180800000000000000
+      internalID: -9122776520905526691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_14
+      rect:
+        serializedVersion: 2
+        x: 9058
+        y: 3299
+        width: 1537
+        height: 1140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c32528892f278e0800000000000000
+      internalID: -1697027372729877383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_15
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 1724
+        width: 1557
+        height: 1181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e148f4a5004fb780800000000000000
+      internalID: -8665136765050797591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_16
+      rect:
+        serializedVersion: 2
+        x: 2402
+        y: 1717
+        width: 1694
+        height: 1215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8aa924ee7ec2ec70800000000000000
+      internalID: 8998982049828809356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_17
+      rect:
+        serializedVersion: 2
+        x: 4573
+        y: 1731
+        width: 1728
+        height: 1270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b686a46bb9df970800000000000000
+      internalID: 8790353254931786587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_18
+      rect:
+        serializedVersion: 2
+        x: 6716
+        y: 1745
+        width: 1797
+        height: 1263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ba593f7f0f1a760800000000000000
+      internalID: 7467514604891253598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_19
+      rect:
+        serializedVersion: 2
+        x: 8914
+        y: 1758
+        width: 1920
+        height: 1250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b8e3c63b7fb1160800000000000000
+      internalID: 6997458796037442359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_20
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 170
+        width: 1907
+        height: 1269
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4a9ee4395da5320800000000000000
+      internalID: 2547583367892280504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_26
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 151
+        width: 1969
+        height: 1254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e63b1a1f27a9ff50800000000000000
+      internalID: 6915742523547399912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_58
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 123
+        width: 1942
+        height: 1301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd5a7183052b0670800000000000000
+      internalID: 8505933018206723533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_79
+      rect:
+        serializedVersion: 2
+        x: 8880
+        y: 170
+        width: 1983
+        height: 1375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7646320084d1039d0800000000000000
+      internalID: -2796703173519907737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_tomato 1_85
+      rect:
+        serializedVersion: 2
+        x: 6751
+        y: 142
+        width: 1952
+        height: 1349
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ca0f6574e86d510800000000000000
+      internalID: 1573601556865002508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 57431acc1309a494e8bac2f9b364cc08
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      explosion_tomato 1_27: -793496766
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
