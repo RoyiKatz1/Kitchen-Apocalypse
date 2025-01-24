@@ -97,5 +97,9 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    public int GetScore()
+    {
+        return score;
+    }
 
 }

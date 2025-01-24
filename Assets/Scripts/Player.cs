@@ -71,24 +71,25 @@ public class Player : MonoBehaviour
     {
         isDead = true;
         Debug.Log("Player has died!");
-        Time.timeScale = 0; // This will pause the game
+        GameManager.Instance.EndGame();
+        gameObject.SetActive(false);
     }
 
     void UpdateHealthBarColor()
     {
-        float healthPercentage = health / maxHealth; // חישוב אחוזי החיים
+        float healthPercentage = health / maxHealth; // Calculate health percentage
 
         if (healthPercentage > 0.5f)
         {
-            healthFill.color = Color.green; // ירוק כשמעל 50%
+            healthFill.color = Color.green; // Green when above 50%
         }
         else if (healthPercentage > 0.2f)
         {
-            healthFill.color = Color.yellow; // צהוב בין 20% ל-50%
+            healthFill.color = Color.yellow; // Yellow between 20% and 50%
         }
         else
         {
-            healthFill.color = Color.red; // אדום מתחת ל-20%
+            healthFill.color = Color.red; // Red below 20%
         }
     }
 
