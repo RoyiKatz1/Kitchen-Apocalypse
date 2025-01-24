@@ -198,13 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<< Updated upstream:Assets/Sprites/Characters/player_walk 1.png.meta
       player_walk 1_0: -4341075437338884959
       player_walk 1_1: -3305790296820388832
       player_walk 1_2: 2435793237683143876
-=======
-      Cabbage_0: 159068718711766808
->>>>>>> Stashed changes:Assets/Sprites/Characters/Cabbage.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
