@@ -2,9 +2,9 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    public float moveSpeed = 3f;
+    public float moveSpeed = 2f;
     public float health = 100f;
-    public float damageAmount = 10f;
+    public float damageAmount = 5f;
     public float damageInterval = 1f;
 
     protected Transform player;

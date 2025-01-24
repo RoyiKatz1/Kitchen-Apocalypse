@@ -11,10 +11,13 @@ public class BigEnemy : Enemy
         moveSpeed *= 0.5f;
 
         // More health
-        health *= 2f;
+        health *= 4f;
 
         // Stronger attack
-        damageAmount *= 1.5f;
+        damageAmount *= 3f;
+
+        // Slower Intervals
+        damageInterval *= 2f;
     }
 
     // You can override other methods if needed
