@@ -32,6 +32,8 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.playerAttackSound);
+
         lastAttackTime = Time.time;
 
         Vector2 attackDirection = playerMovement.IsFacingRight ? Vector2.right : Vector2.left;
