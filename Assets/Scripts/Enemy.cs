@@ -38,8 +38,22 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void MoveTowardsPlayer()
     {
         Vector3 direction = (player.position - transform.position).normalized;
+        FlipSprite(-direction.x);
+
         transform.Translate(direction * moveSpeed * Time.deltaTime);
     }
+
+    protected void FlipSprite(float directionX)
+    {
+        // directionX greater than 0 means the movement is to the right
+        if ((directionX > 0 && transform.localScale.x < 0) || (directionX < 0 && transform.localScale.x > 0))
+        {
+            Vector3 newScale = transform.localScale;
+            newScale.x *= -1; // Flip the X axis to match the movement direction
+            transform.localScale = newScale;
+        }
+    }
+
 
     protected virtual void OnCollisionStay2D(Collision2D collision)
     {
@@ -53,6 +67,7 @@ public abstract class Enemy : MonoBehaviour
             }
         }
     }
+
 
     public virtual void TakeDamage(float damage)
     {
