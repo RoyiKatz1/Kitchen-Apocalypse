@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
     public float moveSpeed = 3f;
     public float health = 100f;
     public float damageAmount = 10f;
     public float damageInterval = 1f;
 
-    private Transform player;
-    private float lastDamageTime;
+    protected Transform player;
+    protected float lastDamageTime;
 
-    void Update()
+    protected virtual void Update()
     {
         if (player == null)
         {
@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void FindPlayer()
+    protected void FindPlayer()
     {
         if (Player.Instance != null)
         {
@@ -34,13 +34,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void MoveTowardsPlayer()
+    protected virtual void MoveTowardsPlayer()
     {
         Vector3 direction = (player.position - transform.position).normalized;
         transform.Translate(direction * moveSpeed * Time.deltaTime);
     }
 
-    void OnCollisionStay2D(Collision2D collision)
+    protected virtual void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<Player>() != null)
         {
@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         health -= damage;
         if (health <= 0)

@@ -1,20 +1,39 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    [System.Serializable]
+    public class EnemyType
+    {
+        public GameObject enemyPrefab;
+        public float spawnWeight = 1f;
+    }
+
+    public List<EnemyType> enemyTypes = new List<EnemyType>();
     public float initialSpawnInterval = 2f;
     public float spawnIntervalDecrease = 0.1f;
     public float minSpawnInterval = 0.5f;
-    public Vector2 spawnAreaSize = new Vector2(10f, 10f); // Adjust this to fit your map size
+    public Vector2 spawnAreaSize = new Vector2(10f, 10f);
 
     private float currentSpawnInterval;
     private float timer;
+    private float totalWeight;
 
     void Start()
     {
         currentSpawnInterval = initialSpawnInterval;
         timer = currentSpawnInterval;
+        CalculateTotalWeight();
+    }
+
+    void CalculateTotalWeight()
+    {
+        totalWeight = 0f;
+        foreach (var enemyType in enemyTypes)
+        {
+            totalWeight += enemyType.spawnWeight;
+        }
     }
 
     void Update()
@@ -31,7 +50,26 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Vector2 spawnPosition = GetRandomSpawnPosition();
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        GameObject enemyToSpawn = ChooseEnemyToSpawn();
+        Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
+    }
+
+    GameObject ChooseEnemyToSpawn()
+    {
+        float randomValue = Random.Range(0f, totalWeight);
+        float cumulativeWeight = 0f;
+
+        foreach (var enemyType in enemyTypes)
+        {
+            cumulativeWeight += enemyType.spawnWeight;
+            if (randomValue <= cumulativeWeight)
+            {
+                return enemyType.enemyPrefab;
+            }
+        }
+
+        // Fallback to the first enemy type if something goes wrong
+        return enemyTypes[0].enemyPrefab;
     }
 
     Vector2 GetRandomSpawnPosition()
