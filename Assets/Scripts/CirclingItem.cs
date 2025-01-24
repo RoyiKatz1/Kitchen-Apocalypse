@@ -4,10 +4,10 @@ using System.Collections.Generic;
 public class CirclingItem : MonoBehaviour
 {
     public Transform player; // Reference to the player's Transform
-    public float orbitSpeed = 50f; // Speed of orbit (degrees per second)
+    public float orbitSpeed = 100f; // Speed of orbit (degrees per second)
     public float orbitRadius = 1.2f; // Distance from the player
     public int damageAmount = 100; // Damage dealt to enemies
-    public float damageCooldown = 1f; // Time between damage applications to the same enemy
+    public float damageCooldown = 0.5f; // Time between damage applications to the same enemy
 
     private float angle; // Current angle of rotation (in degrees)
     private Dictionary<Collider2D, float> lastDamageTime = new Dictionary<Collider2D, float>(); // Tracks when each enemy was last damaged

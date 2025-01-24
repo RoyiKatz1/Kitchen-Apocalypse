@@ -6,15 +6,16 @@ using System.Linq;
 public class Tomato : Enemy
 {
     public float sizeMultiplier = 1.5f;
-    public float explosionRadius = 2f;
-    public int explosionDamage = 40;
+    public float explosionRadius = 1f;
+    public int explosionDamage = 30;
     public AudioClip explosionSound; // Assign this in the Inspector
 
     private Animator animator;
     private bool hasExploded = false;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         // Increase size
         transform.localScale *= sizeMultiplier;
 

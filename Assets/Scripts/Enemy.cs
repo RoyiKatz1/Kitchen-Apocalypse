@@ -2,14 +2,39 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    public float moveSpeed = 2f;
-    public float health = 100f;
-    public float damageAmount = 5f;
+    public float baseMoveSpeed = 2f;
+    public float baseHealth = 100f;
+    public float baseDamageAmount = 5f;
     public float damageInterval = 1f;
-    public int scoreValue = 10; // Default score value
+    public int scoreValue = 10;
 
+    protected float moveSpeed;
+    protected float health;
+    protected float damageAmount;
     protected Transform player;
     protected float lastDamageTime;
+
+    protected virtual void Start()
+    {
+        UpdateStats();
+        FindPlayer();
+    }
+
+    public virtual void UpdateStats()
+    {
+        if (DifficultyManager.Instance != null)
+        {
+            moveSpeed = baseMoveSpeed * DifficultyManager.Instance.GetMultiplier(DifficultyManager.Instance.speedMultiplier);
+            health = baseHealth * DifficultyManager.Instance.GetMultiplier(DifficultyManager.Instance.healthMultiplier);
+            damageAmount = baseDamageAmount * DifficultyManager.Instance.GetMultiplier(DifficultyManager.Instance.damageMultiplier);
+        }
+        else
+        {
+            moveSpeed = baseMoveSpeed;
+            health = baseHealth;
+            damageAmount = baseDamageAmount;
+        }
+    }
 
     protected virtual void Update()
     {
@@ -45,15 +70,13 @@ public abstract class Enemy : MonoBehaviour
 
     protected void FlipSprite(float directionX)
     {
-        // directionX greater than 0 means the movement is to the right
         if ((directionX > 0 && transform.localScale.x < 0) || (directionX < 0 && transform.localScale.x > 0))
         {
             Vector3 newScale = transform.localScale;
-            newScale.x *= -1; // Flip the X axis to match the movement direction
+            newScale.x *= -1;
             transform.localScale = newScale;
         }
     }
-
 
     protected virtual void OnCollisionStay2D(Collision2D collision)
     {
@@ -68,7 +91,6 @@ public abstract class Enemy : MonoBehaviour
             }
         }
     }
-
 
     public virtual void TakeDamage(float damage)
     {

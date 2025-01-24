@@ -167,14 +167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8492d862861d2f488eb0f698c98f1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  health: 100
-  damageAmount: 5
+  baseMoveSpeed: 2
+  baseHealth: 100
+  baseDamageAmount: 5
   damageInterval: 1
   scoreValue: 10
   sizeMultiplier: 1.5
-  explosionRadius: 2
-  explosionDamage: 40
+  explosionRadius: 1
+  explosionDamage: 30
   explosionSound: {fileID: 8300000, guid: 6ea245e0b995fe84abaa323dc07f6845, type: 3}
 --- !u!95 &7231405161482587382
 Animator:

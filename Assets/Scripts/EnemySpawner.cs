@@ -16,6 +16,9 @@ public class EnemySpawner : MonoBehaviour
     public float minSpawnInterval = 0.5f;
     public Vector2 spawnAreaSize = new Vector2(10f, 10f);
 
+    public float statUpdateInterval = 30f;
+    private float lastStatUpdateTime = 0f;
+
     private float currentSpawnInterval;
     private float timer;
     private float totalWeight;
@@ -45,13 +48,27 @@ public class EnemySpawner : MonoBehaviour
             currentSpawnInterval = Mathf.Max(currentSpawnInterval - spawnIntervalDecrease, minSpawnInterval);
             timer = currentSpawnInterval;
         }
+
+        // Update enemy stats periodically
+        if (Time.time - lastStatUpdateTime >= statUpdateInterval)
+        {
+            UpdateAllEnemyStats();
+            lastStatUpdateTime = Time.time;
+        }
     }
 
     void SpawnEnemy()
     {
         Vector2 spawnPosition = GetRandomSpawnPosition();
         GameObject enemyToSpawn = ChooseEnemyToSpawn();
-        Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
+        GameObject spawnedEnemy = Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
+
+        // Update stats for the newly spawned enemy
+        Enemy enemyScript = spawnedEnemy.GetComponent<Enemy>();
+        if (enemyScript != null)
+        {
+            enemyScript.UpdateStats();
+        }
     }
 
     GameObject ChooseEnemyToSpawn()
@@ -77,5 +94,15 @@ public class EnemySpawner : MonoBehaviour
         float x = Random.Range(-spawnAreaSize.x, spawnAreaSize.x);
         float y = Random.Range(-spawnAreaSize.y, spawnAreaSize.y - 2);
         return new Vector2(x, y) + (Vector2)transform.position;
+    }
+
+    void UpdateAllEnemyStats()
+    {
+        // Using FindObjectsByType instead of FindObjectsOfType
+        Enemy[] allEnemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
+        foreach (Enemy enemy in allEnemies)
+        {
+            enemy.UpdateStats();
+        }
     }
 }
