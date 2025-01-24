@@ -6,7 +6,6 @@ public class PlayerAttack : MonoBehaviour
     public float attackCooldown = 0.5f;
     public int attackDamage = 100;
     public LayerMask enemyLayer;
-    public GameObject attackEffectPrefab;
 
     private Animator animator;
     private float lastAttackTime;
@@ -69,18 +68,6 @@ public class PlayerAttack : MonoBehaviour
                     }
                 }
             }
-        }
-
-        // Spawn attack effect
-        if (attackEffectPrefab != null)
-        {
-            Quaternion effectRotation = Quaternion.Euler(0, 0, attackDirection == Vector2.right ? 0 : 180);
-            GameObject effect = Instantiate(attackEffectPrefab, attackPosition, effectRotation);
-            Debug.Log($"Attack effect spawned at {attackPosition}");
-        }
-        else
-        {
-            Debug.LogWarning("Attack effect prefab is not assigned!");
         }
 
         // Trigger animation
