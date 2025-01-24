@@ -869,7 +869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7554271710954870863, guid: 2669d1f4c8061c744bc21859fef3b10b, type: 3}
       propertyPath: m_Name
-      value: BigEnemy
+      value: Tomato
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1337,7 +1337,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 208827256772119041, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
       propertyPath: m_Name
-      value: RegularEnemy
+      value: Carrot
       objectReference: {fileID: 0}
     - target: {fileID: 9211314993723911198, guid: 9952bd72a65f04f4db106c9b6db844dc, type: 3}
       propertyPath: m_LocalPosition.x
