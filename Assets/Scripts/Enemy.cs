@@ -69,7 +69,7 @@ public abstract class Enemy : MonoBehaviour
         Debug.Log($"{GetType().Name} died");
         if (ScoreManager.Instance != null)
         {
-            ScoreManager.Instance.AddScore(scoreValue);
+            ScoreManager.Instance.AddScore(scoreValue, transform.position);
         }
         else
         {
