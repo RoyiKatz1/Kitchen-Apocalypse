@@ -1,11 +1,17 @@
 using UnityEngine;
 using TMPro; // TextMeshPro
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
 
     public TextMeshProUGUI scoreText; // Change this line
+    public Image scoreTitleImage;
+    public Sprite eggFryerSprite;
+    public Sprite veggieFanSprite;
+    public Sprite broccolliHeadSprite;
+    public Sprite zucchiniDestroyerSprite;
     public GameObject popupPrefab; // prefab for the popup score
     private int score = 0;
 
@@ -24,6 +30,8 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
+        scoreTitleImage.gameObject.SetActive(false);
+
         if (scoreText == null)
         {
             Debug.LogWarning("TextMeshProUGUI Score Text not assigned in the inspector!");
@@ -33,8 +41,10 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore(int points, Vector3 position)
     {
+        scoreTitleImage.gameObject.SetActive(true);
         score += points;
         CreateScorePopup(points, position); // create popup for the score
+        UpdateScoreTitle(score);
         UpdateScoreDisplay();
 
     }
@@ -43,17 +53,26 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            string title = GetScoreTitle(score); // get the title based on the score
-            scoreText.text = $"{title}: {score}";
+            scoreText.text = $"{score}";
         }
     }
 
-    private string GetScoreTitle(int currentScore)
+    private void UpdateScoreTitle(int currentScore)
     {
-        if (currentScore <= 100) return "מטגן ביצים";
-        if (currentScore <= 500) return "חובב ירקות";
-        if (currentScore <= 1000) return "מלטף עגבניות";
-        return "משמיד קישואים";
+        if (scoreTitleImage != null)
+
+        {
+
+            if (score <= 100)
+                scoreTitleImage.sprite = eggFryerSprite;
+            else if (score <= 500)
+                scoreTitleImage.sprite = veggieFanSprite;
+            else if (score <= 1000)
+                scoreTitleImage.sprite = broccolliHeadSprite;
+            else
+                scoreTitleImage.sprite = zucchiniDestroyerSprite;
+
+        }
     }
 
     private void CreateScorePopup(int points, Vector3 position)
