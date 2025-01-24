@@ -17,12 +17,14 @@ public class MainMenu : MonoBehaviour
 
     public void PlaySinglePlayer()
     {
+        backgroundMusic.PlayMusic();
         // Load your single-player scene
         SceneManager.LoadScene("SampleScene");
     }
 
     public void PlayCoop()
     {
+        backgroundMusic.PlayMusic();
         // Load your co-op scene
     }
 
