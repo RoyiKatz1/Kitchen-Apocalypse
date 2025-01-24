@@ -1,32 +1,43 @@
 using UnityEngine;
+using System.Collections;
 
 public class LoopingAudio : MonoBehaviour
 {
-    public AudioClip backgroundMusic;
     public float loopStartTime = 0f;
     public float loopEndTime = 0f;
+    public float crossfadeDuration = 1f;
 
     private AudioSource audioSource;
     private float nextLoopTime;
 
     void Start()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = backgroundMusic;
-        audioSource.loop = false;
-        audioSource.playOnAwake = false;
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource component is missing!");
+            return;
+        }
 
-        if (loopEndTime <= 0 || loopEndTime > backgroundMusic.length)
-            loopEndTime = backgroundMusic.length;
+        if (audioSource.clip == null)
+        {
+            Debug.LogError("Audio clip is not assigned to the AudioSource!");
+            return;
+        }
+
+        audioSource.loop = false;
+
+        if (loopEndTime <= 0 || loopEndTime > audioSource.clip.length)
+            loopEndTime = audioSource.clip.length;
 
         PlayMusic();
     }
 
     void Update()
     {
-        if (audioSource.time >= nextLoopTime)
+        if (audioSource.isPlaying && audioSource.time >= nextLoopTime - crossfadeDuration)
         {
-            PlayMusic();
+            StartCoroutine(CrossfadeLoop());
         }
     }
 
@@ -34,6 +45,27 @@ public class LoopingAudio : MonoBehaviour
     {
         audioSource.time = loopStartTime;
         audioSource.Play();
+        nextLoopTime = loopEndTime;
+    }
+
+    IEnumerator CrossfadeLoop()
+    {
+        AudioSource newSource = gameObject.AddComponent<AudioSource>();
+        newSource.clip = audioSource.clip;
+        newSource.time = loopStartTime;
+        newSource.Play();
+
+        float t = 0;
+        while (t < crossfadeDuration)
+        {
+            t += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(1, 0, t / crossfadeDuration);
+            newSource.volume = Mathf.Lerp(0, 1, t / crossfadeDuration);
+            yield return null;
+        }
+
+        Destroy(audioSource);
+        audioSource = newSource;
         nextLoopTime = loopEndTime;
     }
 }
