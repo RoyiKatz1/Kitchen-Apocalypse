@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endGameScreen: {fileID: 124223755}
+  regularScoreText: {fileID: 1012291067}
   isGameOver: 0
 --- !u!4 &57939734
 Transform:

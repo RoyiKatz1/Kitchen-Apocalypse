@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance; // Singleton
 
     public GameObject endGameScreen; // End game screen panel
+    public GameObject regularScoreText;
     public bool isGameOver = false; // Variable to track game state
 
     private void Awake()
@@ -42,6 +43,12 @@ public class GameManager : MonoBehaviour
 
         // Stop the game (optional)
         Time.timeScale = 0;
+
+        // הסתר את הניקוד הרגיל
+        if (regularScoreText != null)
+        {
+            regularScoreText.SetActive(false);
+        }
 
         // Show the end game screen
         if (endGameScreen != null)
