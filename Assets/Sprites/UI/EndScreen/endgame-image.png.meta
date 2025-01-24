@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      endgame-image_0: -1429463707385749651
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
