@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
 
     void CheckScoreForCirclingItem()
     {
-        if (!isCirclingItemActive && ScoreManager.Instance.GetScore() >= 20)
+        if (!isCirclingItemActive && ScoreManager.Instance.GetScore() >= 200)
         {
             ActivateCirclingItem();
         }
