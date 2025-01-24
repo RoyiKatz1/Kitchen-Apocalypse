@@ -1,4 +1,4 @@
-public class BigEnemy : Enemy
+public class Tomato : Enemy
 {
     public float sizeMultiplier = 1.5f;
 
@@ -26,6 +26,6 @@ public class BigEnemy : Enemy
     public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
-        // Additional BigEnemy-specific damage handling
+        // Additional Tomato-specific damage handling
     }
 }
