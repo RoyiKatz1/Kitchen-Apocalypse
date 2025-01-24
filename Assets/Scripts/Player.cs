@@ -1,14 +1,18 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
 
     public float health = 100f;
+    public float maxHealth = 100f;
     public float moveSpeed = 5f;
 
     private Vector2 movement;
     private bool isDead = false;
+    public Slider healthBar;
+    public Image healthFill;
 
     void Awake()
     {
@@ -21,6 +25,14 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void Start()
+    {
+        healthBar.maxValue = maxHealth;
+        healthBar.value = health;
+        UpdateHealthBarColor();
+    }
+
 
     void Update()
     {
@@ -43,7 +55,12 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        health = Mathf.Clamp(health, 0, maxHealth);
+        healthBar.value = health;
+        UpdateHealthBarColor();
+
         Debug.Log("Player health: " + health);
+
         if (health <= 0 && !isDead)
         {
             Die();
@@ -56,4 +73,23 @@ public class Player : MonoBehaviour
         Debug.Log("Player has died!");
         Time.timeScale = 0; // This will pause the game
     }
+
+    void UpdateHealthBarColor()
+    {
+        float healthPercentage = health / maxHealth; // חישוב אחוזי החיים
+
+        if (healthPercentage > 0.5f)
+        {
+            healthFill.color = Color.green; // ירוק כשמעל 50%
+        }
+        else if (healthPercentage > 0.2f)
+        {
+            healthFill.color = Color.yellow; // צהוב בין 20% ל-50%
+        }
+        else
+        {
+            healthFill.color = Color.red; // אדום מתחת ל-20%
+        }
+    }
+
 }
