@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using System.Linq;
 
-
 public class Tomato : Enemy
 {
     public float sizeMultiplier = 1.5f;
@@ -49,11 +48,16 @@ public class Tomato : Enemy
     {
         Debug.Log("Starting explosion coroutine");
         hasExploded = true;
-        Explode();
 
-        // Disable the collider to allow walking through during animation
+        // Stop the tomato from moving
+        moveSpeed = 0f;
+
+        // Disable the collider to prevent further interactions
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
+
+        // Trigger the explosion
+        Explode();
 
         // Wait for the explosion animation to finish
         yield return new WaitForSeconds(3f); // Adjust this time to match your animation length
@@ -102,13 +106,11 @@ public class Tomato : Enemy
             }
         }
 
-        // If no player was found in the hitObjects, log it
         if (!hitObjects.Any(obj => obj.CompareTag("Player")))
         {
             Debug.Log("No player found within explosion radius");
         }
     }
-
 
     private void OnDrawGizmosSelected()
     {
@@ -123,10 +125,12 @@ public class Tomato : Enemy
         // Add any Tomato-specific damage handling here
     }
 
-    // Override MoveTowardsPlayer if you want to change how the Tomato moves
+    // Override MoveTowardsPlayer to stop movement when exploding
     protected override void MoveTowardsPlayer()
     {
-        base.MoveTowardsPlayer();
-        // Add any Tomato-specific movement behavior here
+        if (!hasExploded)
+        {
+            base.MoveTowardsPlayer();
+        }
     }
 }
