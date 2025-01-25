@@ -2704,7 +2704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 1.2
-  attackCooldown: 0.5
+  attackCooldown: 0
   attackDamage: 100
   enemyLayer:
     serializedVersion: 2
@@ -2800,7 +2800,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loopStartTime: 0
   loopEndTime: 0
-  crossfadeDuration: 1
 --- !u!82 &1843024853
 AudioSource:
   m_ObjectHideFlags: 0
