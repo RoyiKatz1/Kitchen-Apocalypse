@@ -8,6 +8,8 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask enemyLayer;
     public float attackAngle = 110f;
 
+    private int baseDamage;
+    private int currentDamageIncrease = 0;
     private Animator animator;
     private float lastAttackTime;
     private PlayerMovement playerMovement;
@@ -20,6 +22,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Debug.LogError("PlayerMovement component not found on this GameObject!");
         }
+        baseDamage = attackDamage;
     }
 
     void Update()
@@ -78,6 +81,13 @@ public class PlayerAttack : MonoBehaviour
                 return true;
         }
         return false;
+    }
+
+    public void ActivatePowerUp(int damageIncrease)
+    {
+        currentDamageIncrease += damageIncrease;
+        attackDamage = baseDamage + currentDamageIncrease;
+        Debug.Log($"Power-up collected! Damage increased to {attackDamage}.");
     }
 
     void OnDrawGizmosSelected()
