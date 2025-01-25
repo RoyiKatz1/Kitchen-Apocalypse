@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public float attackRange = 1.2f;
-    public float attackCooldown = 0.5f;
+    public float attackCooldown = 0f;
     public int attackDamage = 100;
     public LayerMask enemyLayer;
     public float attackAngle = 110f;

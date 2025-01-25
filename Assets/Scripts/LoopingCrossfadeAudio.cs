@@ -1,14 +1,11 @@
 using UnityEngine;
-using System.Collections;
 
-public class LoopingAudio : MonoBehaviour
+public class SimpleLoopingAudio : MonoBehaviour
 {
     public float loopStartTime = 0f;
     public float loopEndTime = 0f;
-    public float crossfadeDuration = 1f;
 
     private AudioSource audioSource;
-    private float nextLoopTime;
 
     void Start()
     {
@@ -25,8 +22,11 @@ public class LoopingAudio : MonoBehaviour
             return;
         }
 
-        audioSource.loop = false;
+        // Set up the audio source
+        audioSource.loop = false; // We'll handle looping manually
+        audioSource.volume = 0.2f;
 
+        // Adjust loop end time if it's invalid
         if (loopEndTime <= 0 || loopEndTime > audioSource.clip.length)
             loopEndTime = audioSource.clip.length;
 
@@ -35,9 +35,9 @@ public class LoopingAudio : MonoBehaviour
 
     void Update()
     {
-        if (audioSource.isPlaying && audioSource.time >= nextLoopTime - crossfadeDuration)
+        if (!audioSource.isPlaying || audioSource.time >= loopEndTime)
         {
-            StartCoroutine(CrossfadeLoop());
+            PlayMusic();
         }
     }
 
@@ -45,27 +45,6 @@ public class LoopingAudio : MonoBehaviour
     {
         audioSource.time = loopStartTime;
         audioSource.Play();
-        nextLoopTime = loopEndTime;
-    }
-
-    IEnumerator CrossfadeLoop()
-    {
-        AudioSource newSource = gameObject.AddComponent<AudioSource>();
-        newSource.clip = audioSource.clip;
-        newSource.time = loopStartTime;
-        newSource.Play();
-
-        float t = 0;
-        while (t < crossfadeDuration)
-        {
-            t += Time.deltaTime;
-            audioSource.volume = Mathf.Lerp(0.2f, 0, t / crossfadeDuration);
-            newSource.volume = Mathf.Lerp(0, 0.2f, t / crossfadeDuration);
-            yield return null;
-        }
-
-        Destroy(audioSource);
-        audioSource = newSource;
-        nextLoopTime = loopEndTime;
+        Debug.Log("Looping audio at time: " + Time.time);
     }
 }
